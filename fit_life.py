@@ -16,9 +16,7 @@ def calculate_bmi(user_weight, user_height):
 # Подсчет воды: вес * 30 мл
 def calculate_water_needed(user_weight):
     """Рассчитываем норму воды"""
-    water_ml = user_weight * WATER_PER_KG
-    water_l = water_ml / MILLILITER_IN_LITER  # Переводим в литры
-    return water_l
+    return (user_weight * WATER_PER_KG / MILLILITER_IN_LITER)
 
 
 # 1. Знакомство
@@ -54,8 +52,7 @@ bmi = calculate_bmi(user_weight, user_height)
 water_l = calculate_water_needed(user_weight)
 
 # 4. Вывод красивого результата
-# TODO: Используй f-строку, чтобы вывести приветствие,
-# например: "Привет, Иван!"
+# TODO: Используй f-строку, чтобы вывести приветствие
 # TODO: Выведи возраст, ИМТ (округленный до 1 знака) и норму воды.
 # Вывод
 print(f'Отчет для пользователя: {user_name} ({user_age} лет)\n'
